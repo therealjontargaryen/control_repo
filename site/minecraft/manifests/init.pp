@@ -1,4 +1,6 @@
 class minecraft {
+  exec {'source /etc/environment':
+  }
   file {'/opt/minecraft':
     ensure => directory
   }
