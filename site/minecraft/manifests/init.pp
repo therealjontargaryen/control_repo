@@ -1,7 +1,4 @@
 class minecraft {
-  file { '/etc/environment':
-    content => inline_template("export https_proxy=http://www-proxy-hqdc.us.oracle.com:80;export HTTPS_PROXY=http://www-proxy-hqdc.us.oracle.com:80")
-  }
   file {'/opt/minecraft':
     ensure => directory
   }
