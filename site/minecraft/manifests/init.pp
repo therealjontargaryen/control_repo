@@ -1,6 +1,7 @@
 class minecraft {
-  exec {'source /etc/environment':
-    path => ['/usr/bin']
+  file {'/etc/profile.d/environment.sh':
+    ensure => file,
+    content => 'export https_proxy=http://www-proxy-hqdc.us.oracle.com:80;export http_proxy=http://www-proxy-hqdc.us.oracle.com:80;export HTTPS_PROXY=http://www-proxy-hqdc.us.oracle.com:80;export HTTP_PROXY=http://www-proxy-hqdc.us.oracle.com:80;export proxy=http://www-proxy-hqdc.us.oracle.com:80',    
   }
   file {'/opt/minecraft':
     ensure => directory
